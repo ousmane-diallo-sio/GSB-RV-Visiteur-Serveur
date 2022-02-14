@@ -28,7 +28,7 @@ def seConnecter( matricule , mdp ) :
 def getRapportsVisite( matricule , mois , annee ) :
 	rapports = modeleGSBRV.getRapportsVisite( matricule , mois , annee )
 	
-	if rapports != None :
+	if rapports != None and rapports != [] :
 		reponse = make_response( json.dumps( rapports ) )
 		reponse.mimetype = 'application/json'
 		reponse.status_code = 200

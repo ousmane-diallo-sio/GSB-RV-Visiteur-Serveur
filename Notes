@@ -1,0 +1,2 @@
+GET /visiteurs/a131/mauvaisMdp retourne 200 OK au lieu de 404
+GET /rapports/fauxId/fauxMois/fausseAnnee retourn 200 OK au lieu de 404
