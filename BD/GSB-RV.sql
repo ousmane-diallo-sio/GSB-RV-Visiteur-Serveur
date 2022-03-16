@@ -43,7 +43,7 @@ CREATE TABLE Famille (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO Famille VALUES 
+INSERT INTO Famille VALUES
 	('AA','Antalgiques en association'),
 	('AAA','Antalgiques antipyrétiques en association'),
 	('AAC','Antidépresseur d\'action centrale'),
@@ -96,7 +96,7 @@ CREATE TABLE Laboratoire (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO Laboratoire VALUES 
+INSERT INTO Laboratoire VALUES
 	('BC','Bichat','Suzanne Terminus'),
 	('GY','Gyverny','Marcel MacDouglas'),
 	('SW','Swiss Kane','Alain Poutre');
@@ -114,7 +114,7 @@ CREATE TABLE Medicament (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO Medicament VALUES 
+INSERT INTO Medicament VALUES
 	('3MYC7','TRIMYCINE','CRT','Triamcinolone (acétonide) + Néomycine + Nystatine','Ce médicament est un corticoïde à activité forte ou très forte associé à un antibiotique et un antifongique, utilisé en application locale dans certaines atteintes cutanées surinfectées.','Ce médicament est contre-indiqué en cas d\'\'allergie à l\'\'un des constituants, d\'\'infections de la peau ou de parasitisme non traités, d\'\'acné. Ne pas appliquer sur une plaie, ni sous un pansement occlusif.',NULL),
 	('ADIMOL9','ADIMOL','ABP','Amoxicilline + Acide clavulanique','Ce médicament, plus puissant que les pénicillines simples, est utilisé pour traiter des infections bactériennes spécifiques.','Ce médicament est contre-indiqué en cas d\'\'allergie aux pénicillines ou aux céphalosporines.',NULL),
 	('AMOPIL7','AMOPIL','ABP','Amoxicilline','Ce médicament, plus puissant que les pénicillines simples, est utilisé pour traiter des infections bactériennes spécifiques.','Ce médicament est contre-indiqué en cas d\'\'allergie aux pénicillines. Il doit être administré avec prudence en cas d\'\'allergie aux céphalosporines.',NULL),
@@ -131,14 +131,14 @@ INSERT INTO Medicament VALUES
 	('DOLRIL7','DOLORIL','AAA','Acide acétylsalicylique (aspirine) + Acide ascorbique (Vitamine C) + Paracétamol','Ce médicament est utilisé dans le traitement symptomatique de la douleur ou de la fièvre.','Ce médicament est contre-indiqué en cas d\'\'allergie au Paracétamol ou aux salicylates.',NULL),
 	('DORNOM8','NORMADOR','HYP','Doxylamine','Ce médicament est utilisé pour traiter l\'\'insomnie chez l\'\'adulte.','Ce médicament est contre-indiqué en cas de glaucome, de certains troubles urinaires (rétention urinaire) et chez l\'\'enfant de moins de 15 ans.',NULL),
 	('EQUILARX6','EQUILAR','AAH','Méclozine','Ce médicament est utilisé pour traiter les vertiges et pour prévenir le mal des transports.','Ce médicament ne doit pas être utilisé en cas d\'\'allergie au produit, en cas de glaucome ou de rétention urinaire.',NULL),
-	('EVILR7','EVEILLOR','PSA','Adrafinil','Ce médicament est utilisé pour traiter les troubles de la vigilance et certains symptomes neurologiques chez le sujet agé.','Ce médicament est contre-indiqué en cas d\'\'allergie à  l\'\'un des constituants.',NULL),
+	('EVILR7','EVEILLOR','PSA','Adrafinil','Ce médicament est utilisé pour traiter les troubles de la vigilance et certains symptomes neurologiques chez le sujet agé.','Ce médicament est contre-indiqué en cas d\'\'allergie à  l\'\'un des constituants.',NULL),
 	('INSXT5','INSECTIL','AH','Diphénydramine','Ce médicament est utilisé en application locale sur les piqûres d\'\'insecte et l\'\'urticaire.','Ce médicament est contre-indiqué en cas d\'\'allergie aux antihistaminiques.',NULL),
 	('JOVAI8','JOVENIL','AFM','Josamycine','Ce médicament est utilisé pour traiter des infections bactériennes spécifiques.','Ce médicament est contre-indiqué en cas d\'\'allergie aux macrolides (dont le chef de file est l\'\'érythromycine).',NULL),
-	('LIDOXY23','LIDOXYTRACINE','AFC','Oxytétracycline +Lidocaïne','Ce médicament est utilisé en injection intramusculaire pour traiter certaines infections spécifiques.','Ce médicament est contre-indiqué en cas d\'\'allergie à  l\'\'un des constituants. Il ne doit pas être associé aux rétinoïdes.',NULL),
-	('LITHOR12','LITHORINE','AP','Lithium','Ce médicament est indiqué dans la prévention des psychoses maniaco-dépressives ou pour traiter les états maniaques.','Ce médicament ne doit pas être utilisé si vous êtes allergique au lithium. Avant de prendre ce traitement, signalez à  votre Médecin traitant si vous souffrez d\'\'insuffisance rénale, ou si vous avez un régime sans sel.',NULL),
-	('PARMOL16','PARMOCODEINE','AA','Codéine + Paracétamol','Ce médicament est utilisé pour le traitement des douleurs lorsque des antalgiques simples ne sont pas assez efficaces.','Ce médicament est contre-indiqué en cas d\'\'allergie à  l\'\'un des constituants, chez l\'\'enfant de moins de 15 Kg, en cas d\'\'insuffisance hépatique ou respiratoire, d\'\'asthme, de phénylcétonurie et chez la femme qui allaite.',NULL),
+	('LIDOXY23','LIDOXYTRACINE','AFC','Oxytétracycline +Lidocaïne','Ce médicament est utilisé en injection intramusculaire pour traiter certaines infections spécifiques.','Ce médicament est contre-indiqué en cas d\'\'allergie à  l\'\'un des constituants. Il ne doit pas être associé aux rétinoïdes.',NULL),
+	('LITHOR12','LITHORINE','AP','Lithium','Ce médicament est indiqué dans la prévention des psychoses maniaco-dépressives ou pour traiter les états maniaques.','Ce médicament ne doit pas être utilisé si vous êtes allergique au lithium. Avant de prendre ce traitement, signalez à  votre Médecin traitant si vous souffrez d\'\'insuffisance rénale, ou si vous avez un régime sans sel.',NULL),
+	('PARMOL16','PARMOCODEINE','AA','Codéine + Paracétamol','Ce médicament est utilisé pour le traitement des douleurs lorsque des antalgiques simples ne sont pas assez efficaces.','Ce médicament est contre-indiqué en cas d\'\'allergie à  l\'\'un des constituants, chez l\'\'enfant de moins de 15 Kg, en cas d\'\'insuffisance hépatique ou respiratoire, d\'\'asthme, de phénylcétonurie et chez la femme qui allaite.',NULL),
 	('PHYSOI8','PHYSICOR','PSA','Sulbutiamine','Ce médicament est utilisé pour traiter les baisses d\'\'activité physique ou psychique, souvent dans un contexte de dépression.','Ce médicament est contre-indiqué en cas d\'\'allergie à l\'\'un des constituants.',NULL),
-	('PIRIZ8','PIRIZAN','ABA','Pyrazinamide','Ce médicament est utilisé, en association à d\'\'autres antibiotiques, pour traiter la tuberculose.','Ce médicament est contre-indiqué en cas d\'\'allergie à  l\'\'un des constituants, d\'\'insuffisance rénale ou hépatique, d\'\'hyperuricémie ou de porphyrie.',NULL),
+	('PIRIZ8','PIRIZAN','ABA','Pyrazinamide','Ce médicament est utilisé, en association à d\'\'autres antibiotiques, pour traiter la tuberculose.','Ce médicament est contre-indiqué en cas d\'\'allergie à  l\'\'un des constituants, d\'\'insuffisance rénale ou hépatique, d\'\'hyperuricémie ou de porphyrie.',NULL),
 	('POMDI20','POMADINE','AO','Bacitracine','Ce médicament est utilisé pour traiter les infections oculaires de la surface de l\'\'oeil.','Ce médicament est contre-indiqué en cas d\'\'allergie aux antibiotiques appliqués localement.',NULL),
 	('TROXT21','TROXADET','AIN','Paroxétine','Ce médicament est utilisé pour traiter la dépression et les troubles obsessionnels compulsifs. Il peut également être utilisé en prévention des crises de panique avec ou sans agoraphobie.','Ce médicament est contre-indiqué en cas d\'\'allergie au produit.',NULL),
 	('TXISOL22','TOUXISOL Vitamine C','ALO','Tyrothricine + Acide ascorbique (Vitamine C)','Ce médicament est utilisé pour traiter les affections de la bouche et de la gorge.','Ce médicament est contre-indiqué en cas d\'\'allergie à l\'\'un des constituants et chez l\'\'enfant de moins de 6 ans.',NULL),
@@ -167,7 +167,7 @@ CREATE TABLE Praticien (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO Praticien VALUES 
+INSERT INTO Praticien VALUES
 	(1,'Notini','Alain','114 r Authie','85000','LA ROCHE SUR YON',290.03,'MH'),
 	(2,'Gosselin','Albert','13 r Devon','41000','BLOIS',307.49,'MV'),
 	(3,'Delahaye','André','36 av 6 Juin','25000','BESANCON',185.79,'PS'),
@@ -304,7 +304,7 @@ CREATE TABLE Region (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO Region VALUES 
+INSERT INTO Region VALUES
 	('AL','E','Alsace Lorraine'),
 	('AQ','S','Aquitaine'),
 	('AU','P','Auvergne'),
@@ -336,7 +336,7 @@ CREATE TABLE Secteur (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO Secteur VALUES 
+INSERT INTO Secteur VALUES
 	('E','Est'),
 	('N','Nord'),
 	('O','Ouest'),
@@ -351,7 +351,7 @@ CREATE TABLE Specialite (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO Specialite VALUES 
+INSERT INTO Specialite VALUES
 	('ACP','anatomie et cytologie pathologiques'),
 	('AMV','angéiologie, Médecine vasculaire'),
 	('ARC','anesthésiologie et réanimation chirurgicale'),
@@ -406,7 +406,7 @@ CREATE TABLE Travailler (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO Travailler VALUES 
+INSERT INTO Travailler VALUES
 	('p49','2014-02-20','CE','Visiteur'),
 	('p49','2015-02-20','CE','Délégué'),
 	('p49','2017-02-20','CE','Responsable'),
@@ -519,7 +519,7 @@ CREATE TABLE Visiteur (
   PRIMARY KEY (vis_matricule)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO Visiteur VALUES 
+INSERT INTO Visiteur VALUES
 	('a131','Villechalane','Louis','8 cours Lafontaine','29000','BREST','2012-11-08',NULL,'SW'),
 	('a17','Andre','David','1 rue Aimon de Chissee','38100','GRENOBLE','2008-06-19',NULL,'GY'),
 	('a55','Bedos','Christian','1 rue Bénédictins','65000','TARBES','2007-09-07',NULL,'GY'),
@@ -629,10 +629,10 @@ ALTER TABLE  Posseder ADD CONSTRAINT FK_POSSEDER_PRATICIEN FOREIGN KEY(pra_num) 
 ALTER TABLE  Posseder ADD CONSTRAINT FK_POSSEDER_SPECIALITE FOREIGN KEY(spe_code) REFERENCES Specialite(spe_code) ;
 
 ALTER TABLE  Praticien ADD CONSTRAINT  FK_PRATICIEN_TYPE_PRATICIEN FOREIGN KEY(typ_code) REFERENCES TypePraticien(typ_code) ;
- 
+
 ALTER TABLE RapportVisite ADD CONSTRAINT  FK_RAPPORT_VISITE_VISITEUR FOREIGN KEY(vis_matricule) REFERENCES Visiteur(vis_matricule) ;
 ALTER TABLE RapportVisite ADD CONSTRAINT  FK_RAPPORT_VISITE_PRATICIEN FOREIGN KEY(pra_num) REFERENCES Praticien(pra_num) ;
- 
+
 ALTER TABLE Realiser ADD CONSTRAINT  FK_REALISER_ACTIVITE_COMPL FOREIGN KEY(ac_num) REFERENCES ActiviteCompl(ac_num) ;
 ALTER TABLE Realiser ADD CONSTRAINT  FK_REALISER_VISITEUR FOREIGN KEY(vis_matricule) REFERENCES Visiteur(vis_matricule) ;
 
