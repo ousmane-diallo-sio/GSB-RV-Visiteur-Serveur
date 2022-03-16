@@ -1,2 +1,6 @@
-GET /visiteurs/a131/mauvaisMdp retourne 200 OK au lieu de 404
-GET /rapports/fauxId/fauxMois/fausseAnnee retourn 200 OK au lieu de 404
+GET /rapports/echantillons/a131/fauxNombre retourne 200 OK au lieu de 404
+GET /rapports/echantillons/fauxId/1 retourne 200 OK au lieu de 404
+
+
+    - [ OK ] ajouter une colonne mdp dans la table Visiteur avec mdp par defaut "azerty"
+    - modifier modelegsb.seConnecter() car aucune verif du mdp
