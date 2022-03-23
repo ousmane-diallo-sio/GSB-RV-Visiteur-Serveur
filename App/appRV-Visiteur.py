@@ -98,13 +98,11 @@ def addRapportVisite() :
 	else :
 		reponse.status_code = 409
 	return reponse
-	
 
 @app.route( '/rapports/echantillons/<matricule>/<numRapport>' , methods = [ 'POST' ] )
 def addEchantillonsOfferts( matricule , numRapport ) :
 	echantillons = json.loads( request.data )
 	nbEchantillons = modeleGSBRV.enregistrerEchantillonsOfferts( matricule , numRapport , echantillons )
-	
 	
 	reponse = make_response( '' )												
 	if numRapport != None :

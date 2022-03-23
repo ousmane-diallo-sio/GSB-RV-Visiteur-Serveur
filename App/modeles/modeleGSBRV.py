@@ -55,6 +55,7 @@ def seConnecter( matricule , mdp ) :
 		
 	except :
 		return None
+
 		
 def getRapportsVisite( matricule , mois , annee ) :
 	try :
@@ -90,7 +91,7 @@ def getRapportsVisite( matricule , mois , annee ) :
 			unRapport[ 'pra_nom' ] = unEnregistrement[ 3 ]
 			unRapport[ 'pra_prenom' ] = unEnregistrement[ 4 ]
 			unRapport[ 'pra_cp' ] = unEnregistrement[ 5 ]
-			unRapport[ 'pra_ville' ] = unEnregistrement[ 5 ]
+			unRapport[ 'pra_ville' ] = unEnregistrement[ 6 ]
 			rapports.append( unRapport )
 			
 		curseur.close()
