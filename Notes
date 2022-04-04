@@ -3,4 +3,4 @@ GET /rapports/echantillons/fauxId/1 retourne 200 OK au lieu de 404
 
 
     - [ OK ] ajouter une colonne mdp dans la table Visiteur avec mdp par defaut "azerty"
-    - modifier modelegsb.seConnecter() car aucune verif du mdp
+    - [ OK ] modifier modelegsb.seConnecter() car aucune verif du mdp

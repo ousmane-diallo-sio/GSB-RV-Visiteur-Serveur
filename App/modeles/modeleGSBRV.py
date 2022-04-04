@@ -3,7 +3,7 @@
 
 
 import mysql.connector
-
+import logging
 
 connexionBD = None
 
@@ -65,6 +65,7 @@ def getRapportsVisite( matricule , mois , annee ) :
 						rv.rap_num ,
 						rv.rap_date_visite ,
 						rv.rap_bilan ,
+						rv.rap_coef_confiance,
 						p.pra_nom ,
 						p.pra_prenom ,
 						p.pra_cp ,
@@ -88,10 +89,11 @@ def getRapportsVisite( matricule , mois , annee ) :
 			unRapport[ 'rap_num' ] = unEnregistrement[ 0 ]
 			unRapport[ 'rap_date_visite' ] = '%04d-%02d-%02d' % ( unEnregistrement[ 1 ].year , unEnregistrement[ 1 ].month , unEnregistrement[ 1 ].day )
 			unRapport[ 'rap_bilan' ] = unEnregistrement[ 2 ]
-			unRapport[ 'pra_nom' ] = unEnregistrement[ 3 ]
-			unRapport[ 'pra_prenom' ] = unEnregistrement[ 4 ]
-			unRapport[ 'pra_cp' ] = unEnregistrement[ 5 ]
-			unRapport[ 'pra_ville' ] = unEnregistrement[ 6 ]
+			unRapport[ 'rap_coef_confiance' ] = unEnregistrement[ 3 ]
+			unRapport[ 'pra_nom' ] = unEnregistrement[ 4 ]
+			unRapport[ 'pra_prenom' ] = unEnregistrement[ 5 ]
+			unRapport[ 'pra_cp' ] = unEnregistrement[ 6 ]
+			unRapport[ 'pra_ville' ] = unEnregistrement[ 7 ]
 			rapports.append( unRapport )
 			
 		curseur.close()
@@ -215,9 +217,10 @@ def genererNumeroRapportVisite( matricule ) :
 		return None
 
 
-def enregistrerRapportVisite( matricule , numPraticien , dateVisite , bilan ) :
+def enregistrerRapportVisite( matricule , numPraticien , dateVisite , bilan, rapMotif, coefConfiance ) :
 	
 	numRapportVisite = genererNumeroRapportVisite( matricule )
+
 	
 	if numRapportVisite != None :
 	
@@ -225,11 +228,11 @@ def enregistrerRapportVisite( matricule , numPraticien , dateVisite , bilan ) :
 			curseur = getConnexionBD().cursor()
 
 			requete = '''
-				insert into RapportVisite( vis_matricule , rap_num , rap_date_visite , rap_bilan , pra_num )
-				values( %s , %s , %s , %s , %s )
+				insert into RapportVisite( vis_matricule , rap_num , rap_date_visite , rap_bilan , pra_num, rap_motif, rap_coef_confiance )
+				values( %s , %s , %s , %s , %s, %s, %s )
 				'''
 
-			curseur.execute( requete, ( matricule , numRapportVisite , dateVisite , bilan , numPraticien ) )
+			curseur.execute( requete, ( matricule , numRapportVisite , dateVisite , bilan , numPraticien, rapMotif, coefConfiance ) )
 			connexionBD.commit()
 			curseur.close()
 

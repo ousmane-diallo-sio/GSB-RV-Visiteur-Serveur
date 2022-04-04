@@ -3,6 +3,7 @@
 
 from flask import *
 import json
+import logging
 
 from modeles import modeleGSBRV
 
@@ -86,12 +87,38 @@ def getMedicaments() :
 @app.route( '/rapports' , methods = [ 'POST' ] )
 def addRapportVisite() :
 	unRapport = json.loads( request.data )
+
+	dateVisite = unRapport['visite']
+	#app.logger.info("dateVisite : " + dateVisite)
+
+	dateVisite = dateVisite.split("/")
+	jour = dateVisite[0]
+	mois = dateVisite[1]
+	annee = dateVisite[2]
+
+	#app.logger.info("jour : " + jour)
+	#app.logger.info("mois : " + mois)
+	#app.logger.info("annee : " + annee)
+
+	dateVisite = annee + "-" + mois + "-" + jour
+
 	numRapport = modeleGSBRV.enregistrerRapportVisite( 	unRapport[ 'matricule' ] , 
 																unRapport[ 'praticien' ] ,
-																unRapport[ 'visite' ] ,
-																unRapport[ 'bilan' ] )
-	
-	reponse = make_response( '' )												
+																dateVisite ,
+																unRapport[ 'bilan' ] ,
+														  		unRapport[ 'motif' ],
+														  		unRapport[ 'coef_confiance' ]
+  	)
+	app.logger.info(
+		"Création d'un rapport de visite : "
+		+ "\n Matricule : " + json.dumps(unRapport['matricule'])
+		+ "\n numPraticien : " + json.dumps(unRapport['praticien'])
+		+ "\n Date de visite : " + json.dumps(dateVisite)
+		+ "\n Motif : " + json.dumps(unRapport['motif'])
+		+ "\n CoefConfiance : " + json.dumps(unRapport['coef_confiance'])
+	)
+
+	reponse = make_response( '' )
 	if numRapport != None :
 		reponse.headers[ 'Location' ] = '/rapports/%s/%d' % ( unRapport[ 'matricule' ] , numRapport )
 		reponse.status_code = 201
