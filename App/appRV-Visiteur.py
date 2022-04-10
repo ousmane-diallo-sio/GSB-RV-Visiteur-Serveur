@@ -28,7 +28,9 @@ def seConnecter( matricule , mdp ) :
 @app.route( '/rapports/<matricule>/<mois>/<annee>' , methods = [ 'GET' ] )
 def getRapportsVisite( matricule , mois , annee ) :
 	rapports = modeleGSBRV.getRapportsVisite( matricule , mois , annee )
-	
+
+	app.logger.info( "Liste des rapports : " + str(rapports))
+
 	if rapports != None and rapports != [] :
 		reponse = make_response( json.dumps( rapports ) )
 		reponse.mimetype = 'application/json'
@@ -107,7 +109,8 @@ def addRapportVisite() :
 																dateVisite ,
 																unRapport[ 'bilan' ] ,
 														  		unRapport[ 'motif' ],
-														  		unRapport[ 'coef_confiance' ]
+														  		unRapport[ 'coef_confiance' ],
+														 		unRapport[ 'date_redaction' ]
   	)
 	app.logger.info(
 		"Création d'un rapport de visite : "
@@ -116,12 +119,18 @@ def addRapportVisite() :
 		+ "\n Date de visite : " + json.dumps(dateVisite)
 		+ "\n Motif : " + json.dumps(unRapport['motif'])
 		+ "\n CoefConfiance : " + json.dumps(unRapport['coef_confiance'])
+		+ "\n Date de rédaction : " + json.dumps(unRapport['date_redaction'])
 	)
 
 	reponse = make_response( '' )
 	if numRapport != None :
+		objetJSON = {}
+		objetJSON['rap_num'] = numRapport
+		reponse = make_response(json.dumps(objetJSON))
+		reponse.mimetype = 'application/json'
 		reponse.headers[ 'Location' ] = '/rapports/%s/%d' % ( unRapport[ 'matricule' ] , numRapport )
 		reponse.status_code = 201
+		app.logger.info(reponse)
 	else :
 		reponse.status_code = 409
 	return reponse
